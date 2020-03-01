@@ -1,0 +1,29 @@
+
+// variable overrides
+
+$theme-colors: (
+    "primary": #013c7a
+);
+
+$body-bg: #180666;
+
+
+.jumbotron {
+    background-color: rgb(66, 64, 64) !important;
+    color: white;
+    border-top: 3px solid rgb(219, 219, 219);
+    border-right: 3px solid rgb(219, 219, 219) ;
+}
+// Bootstrap Sass Imports
+@import "node_modules/bootstrap/scss/bootstrap";
+// Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Bootstrap 4 Layout</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<!--grid container, navbar with dropdown, hero section with a jumbotron, grid system, bootstrap margin/padding and vertical navigation, changed theme colors using sass. -->
+    <body>
+        <div class="container">
+            <!--This is a basic navigation declaration-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">CompanyName</a>
+                    <!--This is just a button, but it is getting modified for the hamburger section -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <!--This is just an <a> link tag however with the "dropdown-toggle" in the class it changes the behavior-->
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
+                                Products
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Product 1</a>
+                                <a class="dropdown-item" href="#">Product 2</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Another Product</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+<!--A jumbotron indicates a big box for calling extra attention to some special content or information.
+A jumbotron is displayed as a grey box with rounded corners. It also enlarges the font sizes of the text inside it.
+Tip: Inside a jumbotron you can put nearly any valid HTML, including other Bootstrap elements/classes.-->
+            <div class="jumbotron">
+                <h1 class="display-4">Simple. Elegant. Awesome.</h1>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title</p>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+<!-- Honestly wish there was a semantic element for many of these thing
+but alas, there is not... <div> containers are generic containers yes, however the assignment of classes allows rules to target
+    and thus creating in effect a custom element-->
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title</p>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title</p>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Here we see multiple classes assigned for responsive behavior
+thus defining how many columns and margin size we want the element to assume based off small/medium/large screens-->
+            <div class="row mt-sm-4 mt-md-0">
+                <div class="col-sm-12 col-md-8 text-sm-center text-md-left">
+                        <h3>An Important Heading</h3>
+                        <p class="lead">A sort of important subheadiing can go here, which is larger and grey by default :)</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi cumque commodi soluta quo earum harum ducimus. Culpa quidem, porro blanditiis delectus amet beatae deserunt laboriosam, nam sequi quos saepe in?
+                        </p>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <h3 class="mb-4">Secondary Menu</h3>
+            
+                    <ul class="nav flex-column nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>
