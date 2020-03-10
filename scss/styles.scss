@@ -1,0 +1,127 @@
+// Assign at least 2 variables
+
+$primary-color: rgb(155, 102, 4);
+$accent: tan;
+$accent2: red;
+
+//Nesting of at least 3 selectors
+
+nav {
+    
+    a{  
+        box-shadow: 3px 3px black;
+        color: $accent2;
+        border: groove;
+        border-color: $accent2;
+        background-color: $accent;
+        border-radius: 15px;
+        text-shadow: 1px 1px black;
+        &:hover{
+            color: black;
+            background-color: $accent2;
+            border-color: black;
+            text-shadow: 1px 1px$accent;
+        }
+    }
+}
+
+// Nesting of at least 3 properties
+
+div {
+    .container{
+        box-shadow: 3px 3px black;
+    }
+    img{
+        border: 3px groove;
+        border-color: $accent2;
+        box-shadow: 3px 3px black;
+    }
+   
+    .card-body {
+        background-color: $accent;
+        border: 3px solid;
+        border-color: $accent2;
+        box-shadow: 4px 3px black;
+        border-radius: 15px;
+        height: 15rem;
+    }
+    .card{
+        background-color: $primary-color;
+    }
+
+}
+
+// A nested media query
+h5.card-title{
+    color: $accent2;
+    text-shadow: 1px 1px black;
+    @media (max-width: 700px) {
+        color: black;
+    }
+}
+
+// Use the @extend to pass all CSS styles from one selector to another
+p{
+    @extend h5.card-title;
+}
+
+// Use a mixin with @include to write a reusable chuck of code
+@mixin style_change(){
+    border: dotted 3px red;
+    background-image: url('../images/map.jpg');
+    
+}
+
+.map{
+    @include style_change();
+}
+// Demo at least one Sass functions // Demo any use of math using Sass
+@function remsize($pixelsize) {
+   @return ($pixelsize/10)+rem;
+  }
+
+  h5.loc{
+      font-size: remsize(40);
+  }
+
+
+
+
+
+
+
+
+
+
+// variable overrides
+
+$theme-colors: (
+    "primary": #013c7a
+);
+
+$body-bg: $primary-color;
+
+// jumbotron is already defined but we are overriding it here
+.jumbotron {
+    background-image: url('../images/store_front2.jpg');
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    border: 3px groove black;
+    box-shadow: 3px 3px black;
+}
+// Bootstrap Sass Imports
+@import "node_modules/bootstrap/scss/bootstrap";
+// Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";
